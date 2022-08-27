@@ -30,7 +30,7 @@ Your version maybe different.
 # Install Pico SDK and other programs for C development.
 
 Use the very nice video from Shawn Hymel to setup your RPI 4 for C development of Pico.
-(https://www.youtube.com/watch?v=B5rQSoOmR5w)
+[Video](https://www.youtube.com/watch?v=B5rQSoOmR5w)
 
 # Install TigerPico
 
