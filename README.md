@@ -8,7 +8,8 @@ This is a javafx gui for the openocd program and the Raspberry Pi Pico board.
 # About development setup.
 
 When I develop for RPI Pico I use a RPI 4 64bit and 4gig of memory.  I also use a USB SSD drive
-to boot from which is much faster then the SD card.
+to boot from which is much faster then the SD card. I would rather use C over C++ or python becasue I
+am old and set in my ways.  I rarely program in anything other than C and/or Java.
 
 # Setup
 
