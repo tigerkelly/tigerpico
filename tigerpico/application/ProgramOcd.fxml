@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProgramOcdController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Tiger Pico">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label prefWidth="150.0" text="Saved Configs:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbConfigs" editable="true" onAction="#doConfigs" prefHeight="32.0" prefWidth="225.0" promptText="Select or Type Config" style="--fx-font-size: 24pt;" visibleRowCount="15">
+                     <tooltip>
+                        <Tooltip text="Select or type config name." />
+                     </tooltip></ComboBox>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#doSave" prefHeight="32.0" prefWidth="100.0" text="Save">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Save current config." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#doDelete" prefHeight="32.0" prefWidth="100.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Delete the current config." />
+                     </tooltip>
+                  </Button>
+                  <ComboBox fx:id="cbDebugOptions" prefHeight="32.0" prefWidth="160.0" promptText="Opt: -d, Select Debug">
+                     <tooltip>
+                        <Tooltip text="Set debug level." />
+                     </tooltip></ComboBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label prefWidth="150.0" text="Elf File:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtElf" editable="false" promptText="Select the ELF file to load into Pico." HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnElf" mnemonicParsing="false" onAction="#doElf" text="^">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label prefWidth="150.0" text="Config Files:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="taConfigs" prefHeight="50.0" promptText="Opt -f, Select all of the confguration files needed." text="interface/raspberrypi-swd.cfg target/rp2040.cfg" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label prefWidth="150.0" text="OpenOcd:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtOpenOcd" editable="false" promptText="Select the openocd program to execute." text="/usr/local/bin/openocd" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnOpenOcd" mnemonicParsing="false" onAction="#doOpenOcd" text="^">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label prefWidth="150.0" text="Search Paths:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="taPaths" prefHeight="50.0" promptText="Opt -s, Select search directories to find configuration files. The default is /usr/local/share/openocd/scripts" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Button fx:id="btnExecute" mnemonicParsing="false" onAction="#doExecute" prefHeight="40.0" prefWidth="175.0" text="Execute">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Execute the current config." />
+                     </tooltip>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextArea fx:id="taStatus" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-size: 14pt;" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

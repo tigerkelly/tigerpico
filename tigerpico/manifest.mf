@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: inifile8-2.0.15.jar controlsfx-8.40.14.jar logback-classic.jar logback-core.jar slf4j-api.jar log4j-1.2.17.jar
+Main-Class: application.Main
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sna.ErrorController">
+    <center>
+        <ScrollPane BorderPane.alignment="CENTER">
+         <content>
+            <TextArea fx:id="errorMessage" prefHeight="697.0" prefWidth="997.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+         </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
