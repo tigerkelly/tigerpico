@@ -37,7 +37,7 @@ Use the very nice video from Shawn Hymel to setup your RPI 4 for C development o
 The TigerPico program is installed either by compiling the java source or using the tar file in the source.
 
 In the pi home directory
-	tar xvzf ../TigerPico.tgz
+	tar xvzf ./TigerPico.tgz
 
 The *bin* directory will contain a shell script to run the TigerPico GUI program
 
