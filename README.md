@@ -17,7 +17,9 @@ am old and set in my ways.  I rarely program in anything other than C and/or Jav
 *NOTE:* When installing the RPI OS be sure and select the 64bit full version.
 
 Once done installing the 64bit OS onto the USB SSD drive, you will need to install a 64bit Java version.
+
 Go to [BellSoft](https://bell-sw.com/) and download the Java JDK full 18 version for linux.
+
 Click on Downloads->Liberica JDK then scroll down and select JDK 18 current, then scroll down to
 Linux 64bit, click ARM radio button and then for the Package type select 'Full JDK' in the drop down box.
 
