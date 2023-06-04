@@ -3,8 +3,6 @@ A qui for openocd, running under RPI.
 
 If you are interested in Raspberry Pi then check out my [Etsy shop](https://www.etsy.com/shop/TigerLuckyCreations?ref=shop_sugg_market)
 
-This is a javafx gui for the openocd program and the Raspberry Pi Pico board.
-
 ![alt text](/images/tigerpico.png?raw=true)
 
 # About development setup.
